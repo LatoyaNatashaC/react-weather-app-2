@@ -13,7 +13,7 @@ export default function Weather() {
   }
   if (ready) {
     return (
-      <div className="Weather">
+      <div className="Weather mt-5">
         <form>
           <div className="row">
             <div className="col-9">
@@ -21,10 +21,15 @@ export default function Weather() {
                 type="search"
                 placeholder="Enter a city..."
                 className="form-control"
+                autoFocus="on"
               />
             </div>
             <div className="col-3">
-              <input type="submit" value="search" className="btn btn-primary" />
+              <input
+                type="submit"
+                value="search"
+                className="btn btn-primary w-100"
+              />
             </div>
           </div>
         </form>
@@ -34,13 +39,19 @@ export default function Weather() {
           <li>Wednesday 9:00 Am</li>
           <li>Sunny</li>
         </ul>
-        <div className="row">
+        <div className="row mt-3">
           <div className="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Sunny"
-            />
-            {Math.round(temperature)}
+            <div className="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                alt="Sunny"
+                className="float-left"
+              />
+              <div className="float-left">
+                <span className="temperature">{Math.round(temperature)}</span>
+                <span className="unit">ºF</span>
+              </div>
+            </div>
           </div>
           <div className="col-6">
             <ul>
