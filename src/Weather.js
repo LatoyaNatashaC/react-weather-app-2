@@ -11,7 +11,7 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
-      date: "Wednesday 7:00",
+      date: new Date(response.data.time * 1000),
       wind: response.data.wind.speed,
       city: response.data.city,
       description: response.data.condition.description,
@@ -43,7 +43,7 @@ export default function Weather(props) {
 
         <h1>{weatherData.city}</h1>
         <ul>
-          <li>{weatherData.date}</li>
+          <li>{<FormattedDate date={weatherData.date} />}</li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>
         <div className="row mt-3">
@@ -73,7 +73,6 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "4f3b0tf3219b4c7758082d0o48eabbbe";
-
     const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
 
