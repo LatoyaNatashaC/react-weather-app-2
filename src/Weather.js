@@ -23,6 +23,7 @@ export default function Weather(props) {
   function handleSubmit(event) {
     event.preventDefault();
   }
+  function handleCityChange(event) {}
   if (weatherData.ready) {
     return (
       <div className="Weather mt-5">
@@ -34,6 +35,7 @@ export default function Weather(props) {
                 placeholder="Enter a city..."
                 className="form-control"
                 autoFocus="on"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-3">
