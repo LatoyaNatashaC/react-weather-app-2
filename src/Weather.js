@@ -20,6 +20,9 @@ export default function Weather(props) {
       icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     });
   }
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
   if (weatherData.ready) {
     return (
       <div className="Weather mt-5">
