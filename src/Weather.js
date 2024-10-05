@@ -23,8 +23,11 @@ export default function Weather(props) {
   }
   function handleSubmit(event) {
     event.preventDefault();
+    alert(city);
   }
-  function handleCityChange(event) {}
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
   if (weatherData.ready) {
     return (
       <div className="Weather mt-5">
@@ -53,7 +56,7 @@ export default function Weather(props) {
     );
   } else {
     const apiKey = "4f3b0tf3219b4c7758082d0o48eabbbe";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=imperial`;
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
