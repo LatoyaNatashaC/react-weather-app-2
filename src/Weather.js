@@ -21,9 +21,14 @@ export default function Weather(props) {
       icon: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     });
   }
+  function search() {
+    const apiKey = "4f3b0tf3219b4c7758082d0o48eabbbe";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
   function handleSubmit(event) {
     event.preventDefault();
-    alert(city);
+    search();
   }
   function handleCityChange(event) {
     setCity(event.target.value);
@@ -55,10 +60,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "4f3b0tf3219b4c7758082d0o48eabbbe";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading...";
   }
 }
