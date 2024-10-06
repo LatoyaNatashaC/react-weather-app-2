@@ -11,6 +11,7 @@ export default function App() {
           <a
             href="https://github.com/LatoyaNatashaC?tab=repositories"
             target="_blank"
+            rel="noreferrer"
           >
             Latoya Natasha Campbell
           </a>{" "}
@@ -18,9 +19,11 @@ export default function App() {
           <a
             href="https://github.com/LatoyaNatashaC?tab=repositories"
             target="_blank"
+            rel="noreferrer"
           >
             open sourced on GitHub
-          </a>
+          </a>{" "}
+          and hosted on Netlify.
         </footer>
       </div>
     </div>
