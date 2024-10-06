@@ -23,7 +23,14 @@ export default function App() {
           >
             open sourced on GitHub
           </a>{" "}
-          and hosted on Netlify.
+          and{" "}
+          <a
+            href="https://latoyas-react-weather-app-two.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            hosted on Netlify
+          </a>
         </footer>
       </div>
     </div>
