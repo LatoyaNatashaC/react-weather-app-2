@@ -5,7 +5,7 @@ import WeatherIcon from "./WeatherIcon";
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <h1>{props.data.city}</h1>
+      <h1 className="mt-4">{props.data.city}</h1>
       <ul>
         <li>{<FormattedDate date={props.data.date} />}</li>
         <li className="text-capitalize">{props.data.description}</li>
