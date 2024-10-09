@@ -24,7 +24,9 @@ export default function WeatherForecast(props) {
               <span className="WeatherForecast-temperature-max">
                 {forecast[4].temperature.maximum}º
               </span>
-              <span className="WeatherForecast-temperature-min"> 56º</span>
+              <span className="WeatherForecast-temperature-min">
+                {forecast[4].temperature.minimum}º
+              </span>
             </div>
           </div>
         </div>
