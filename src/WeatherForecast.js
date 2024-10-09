@@ -21,7 +21,9 @@ export default function WeatherForecast(props) {
             <div className="WeatherForecast-day">Thur</div>
             <WeatherIcon code="clear-sky-day" size={36} />
             <div className="WeatherForecast-temperature">
-              <span className="WeatherForecast-temperature-max">84º</span>
+              <span className="WeatherForecast-temperature-max">
+                {forecast[4].temperature.maximum}º
+              </span>
               <span className="WeatherForecast-temperature-min"> 56º</span>
             </div>
           </div>
