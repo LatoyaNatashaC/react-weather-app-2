@@ -3,6 +3,9 @@ import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast(props) {
+  let apiKey = "4f3b0tf3219b4c7758082d0o48eabbbe";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${props.city}&key=${apiKey}&units=metric`;
+
   return (
     <div className="WeatherForecast">
       <div className="row">
